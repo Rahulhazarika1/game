@@ -141,6 +141,27 @@ function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'w' || event.key == "ArrowUp") {
+    moveup()
+  }
+});
+    document.addEventListener('keydown', function(event) {
+  if (event.key === 's' || event.key == "ArrowDown") {
+    movedown()
+  }
+});
+    document.addEventListener('keydown', function(event) {
+  if (event.key === 'a' || event.key == "ArrowLeft") {
+    moveleft()
+  }
+});
+    document.addEventListener('keydown', function(event) {
+  if (event.key === 'd' || event.key == "ArrowRight") {
+    moveright()
+  }
+});
 </script>
 <div style="text-align:center;width:480px;">
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
